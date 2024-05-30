@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<module rename-to='mvp'>
+
+	<inherits name='com.google.gwt.user.User' />
+	<!-- <inherits name='com.google.gwt.user.theme.clean.Clean' /> -->
+	<!-- Other module inherits -->
+	<inherits name="com.google.gwt.activity.Activity" />
+	<inherits name="com.google.gwt.place.Place" />
+	<inherits name="org.gwtbootstrap3.GwtBootstrap3" />
+
+	<!-- nhưng modul này sẽ áp dụng cho client -> nó phải là .jar của gwt -> 
+		nó phải có .gwt.xml -->
+	<!-- <inherits name="com.google.gson.Gson"/> -->
+
+	<!-- Specify the app entry point class. -->
+	<entry-point class='com.tiendq3.client.Mvp' />
+
+	<!-- Specify the paths for translatable code -->
+	<source path='client' />
+	<source path='shared' />
+
+	<!-- allow Super Dev Mode -->
+	<add-linker name="xsiframe" />
+</module>

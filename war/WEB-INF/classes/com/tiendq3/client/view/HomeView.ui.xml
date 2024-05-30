@@ -1,0 +1,53 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
+	<ui:style>
+	.container {
+		display: flex;
+		justify-content: space-around;
+	}
+	
+	.formInput {
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		padding: 10px;
+	}
+	
+	.title {
+		font-size: 30px;
+		display: block;
+	}
+	
+	.saveButton {
+		background-color: violet;
+	}
+	</ui:style>
+	<b:Container ui:field="container"
+		styleName="{style.container}">
+		<b:Container ui:field="formInput"
+			styleName="{style.formInput}">
+			<b:Label styleName="{style.title}">Nhập thông tin:</b:Label>
+			<b:Label>Tên: </b:Label>
+			<b:TextBox ui:field="name"></b:TextBox>
+			<b:Label>Tuổi: </b:Label>
+			<b:TextBox ui:field="age"></b:TextBox>
+			<b:Label>Giới tính: </b:Label>
+			<b:ListBox ui:field="gender">
+				<b:item value="male">Nam</b:item>
+				<b:item value="female">Nữ</b:item>
+				<b:item value="other">
+					Khác
+				</b:item>
+			</b:ListBox>
+			<b:Label>Địa chỉ: </b:Label>
+			<b:TextBox ui:field="address"></b:TextBox>
+			<b:Button ui:field="saveButton">Save</b:Button>
+		</b:Container>
+		<g:HTMLPanel styleName="{style.formInput}">
+			<g:FlexTable ui:field="personTable"
+				styleName="personTable">
+			</g:FlexTable>
+		</g:HTMLPanel>
+
+	</b:Container>
+</ui:UiBinder> 

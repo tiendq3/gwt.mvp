@@ -1,0 +1,2 @@
+serviceClass: com.tiendq3.client.PersonService
+path: 732E31728BB88B5CE0EF4A19020A729F.gwt.rpc

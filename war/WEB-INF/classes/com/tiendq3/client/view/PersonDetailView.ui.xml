@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:b="urn:import:org.gwtbootstrap3.client.ui">
+	<ui:style>
+	.container {
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		padding: 10px;
+	}
+	
+	.title {
+		font-size: 30px;
+	}
+	</ui:style>
+	<g:HTMLPanel ui:field="container">
+		<g:Label styleName="{style.title}">Thông tin chi tiết</g:Label>
+		<g:Label>Tên: </g:Label>
+		<g:TextBox ui:field="name"></g:TextBox>
+		<g:Label>Tuổi: </g:Label>
+		<g:TextBox ui:field="age"></g:TextBox>
+		<g:Label>Giới tính: </g:Label>
+		<g:ListBox ui:field="gender">
+			<g:item value="male">Nam</g:item>
+			<g:item value="female">Nữ</g:item>
+			<g:item value="other">Khác</g:item>
+		</g:ListBox>
+		<g:Label>Địa chỉ: </g:Label>
+		<g:TextBox ui:field="address"></g:TextBox>
+		<g:Button ui:field="saveButton">Save</g:Button>
+	</g:HTMLPanel>
+</ui:UiBinder> 
